@@ -29,9 +29,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link to="/contact" className="hover:text-white transition">Help Center</Link></li>
               <li><Link to="/contact" className="hover:text-white transition">Book a Demo</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition">Status</Link></li>
             </ul>
           </div>
 
@@ -47,10 +45,6 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} Khaoji. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/contact" className="hover:text-white">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-white">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>

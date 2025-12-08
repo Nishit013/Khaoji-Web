@@ -121,8 +121,8 @@ const Features: React.FC = () => {
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 pb-20">
+        {/* Features Grid - Made Cards Bigger */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
           {filteredFeatures.map((feature) => {
             const Icon = feature.icon;
             
@@ -130,27 +130,27 @@ const Features: React.FC = () => {
               <div 
                 key={feature.id}
                 onClick={() => setSelectedFeature(feature)}
-                className="group bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between h-[200px] relative overflow-hidden"
+                className="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[280px] relative overflow-hidden"
               >
                 <div className="relative z-10">
-                  <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 mb-4 group-hover:bg-khaoji-primary group-hover:text-white transition-colors duration-300">
-                    <Icon size={20} strokeWidth={2}/>
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 mb-6 group-hover:bg-khaoji-primary group-hover:text-white transition-colors duration-300">
+                    <Icon size={28} strokeWidth={2}/>
                   </div>
-                  <h3 className="font-bold text-slate-800 text-lg leading-snug mb-1 pr-4">
+                  <h3 className="font-bold text-slate-800 text-xl leading-snug mb-2 pr-4">
                     {feature.name}
                   </h3>
-                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wide">{feature.category}</p>
+                  <p className="text-sm text-slate-400 font-medium uppercase tracking-wide">{feature.category}</p>
                 </div>
 
-                <div className="relative z-10 mt-auto flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <span className="text-sm font-semibold text-khaoji-primary">View Details</span>
-                  <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-900">
-                    <Plus size={16} />
+                <div className="relative z-10 mt-auto flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 pt-4">
+                  <span className="text-base font-semibold text-khaoji-primary">View Details</span>
+                  <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-900">
+                    <Plus size={20} />
                   </div>
                 </div>
                 
                 {/* Decoration */}
-                <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-gradient-to-br from-khaoji-primary/10 to-transparent rounded-full z-0 transition-transform duration-500 group-hover:scale-150"></div>
+                <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-gradient-to-br from-khaoji-primary/10 to-transparent rounded-full z-0 transition-transform duration-500 group-hover:scale-150"></div>
               </div>
             );
           })}
