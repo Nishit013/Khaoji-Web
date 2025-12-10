@@ -40,8 +40,8 @@ const Contact: React.FC = () => {
   }, [location.state]);
 
   // Pricing Constants
-  const POS_PRICE_MONTHLY = 600;
-  const POS_PRICE_YEARLY = 6000;
+  const POS_PRICE_MONTHLY = 500;
+  const POS_PRICE_YEARLY = 5000;
   const API_COST_MONTHLY = 499;
   const API_COST_YEARLY = 4700; // Updated to 4700
 
